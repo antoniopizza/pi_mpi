@@ -173,4 +173,14 @@ La weak scaling per il metodo Monte Carlo è stata testata compiendo 2000 e 3000
 
 ![image](https://github.com/antoniopizza/pi_mpi/blob/master/img/weak_MonteCarlo.png)
 
+## Come compilare il progetto
 
+ ```bash
+mpicc PIparallelo_trapezio.c -o trap
+mpirun -np <num_processori> -hostfile hostfile trap
+```
+
+ ```bash
+mpicc PIparallelo_montecarlo.c -o monte
+mpirun -np <num_processori> -hostfile hostfile monte <num_iter>
+```
