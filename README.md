@@ -133,3 +133,17 @@ Ricevuti il numero iterazioni da compiere, ogni slave eseguirà le operazioni ne
 
 #### Confronto soluzioni
 Analizzando le soluzioni dei due algoritmi eseguiti con lo stesso input possiamo dedurre che il calcolo del π è più preciso se eseguito con il metodo del trapezio rispetto a quello eseguito con Monte Carlo. Questo succede perché col metodo Monte Carlo il numero totale di iterazioni viene diviso tra i dversi slave ed i valori casuali calcolati tramite un seme fisso, sono dimezzati e uguali per ogni slave rendendo così la soluzione meno precisa rispetto al metodo del trapezio. Infatti usando l'algoritmo del trapezio, indipendentemente dal numero dei processori, il valore del π è sempre pari a 3,141593. Se i stessi test vengono fatti utilizzando l'algoritmo di Monte Carlo, all'aumentare del numero dei processori e con un valore di iterazioni costanti, il valore del π sarà sempre meno preciso perchè come detto in precedenza il numero di iterazioni viene diviso tra i vari slave e quindi vengono generati meno valori pseudocasuali per la determinazione del risultato finale. 
+
+#### Testing 
+I test sono stati effettuati sulle istanze m4.large (2core) di Amazon Web Services. Durante la fase di test si è tenuto conto sia della strong scaling che della weak scaling. 
+Risorse utilizzate: 
+
+ - 8 Istanze EC2 m4.large  **StarCluster-Ubuntu-12.04-x86_64-hvm**  -  _ami-52a0c53b_
+ - 16 processori (2 core per Istanza).
+I tempi presenti nelle immagini dello strong e weak scaling sono riportati in millisecondi. 
+
+### Strong scaling metodo trapezio
+
+Nella fase di testing che ha tenuto in considerazione lo strong scalini sono stati effettuati 1E7 iterazioni. Nello strong scalini infatti, il numero di iterazioni resta invariato, quello che cambia è solamente il numero di processori. Nella figura in basso è possibile osservare i risultati i questa fase di testing. 
+
+
