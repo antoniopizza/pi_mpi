@@ -146,4 +146,24 @@ I tempi presenti nelle immagini dello strong e weak scaling sono riportati in mi
 
 Nella fase di testing che ha tenuto in considerazione lo strong scalini sono stati effettuati 1E7 iterazioni. Nello strong scalini infatti, il numero di iterazioni resta invariato, quello che cambia è solamente il numero di processori. Nella figura in basso è possibile osservare i risultati i questa fase di testing. 
 
+![image](https://github.com/antoniopizza/pi_mpi/blob/master/img/strong_trapezio.png)
+
+### Weak scaling metodo trapezio
+
+Tenendo in considerazione che la weak scaling dovrebbe crescere in proporzione al numero di processori, questa fase di test per il metodo del trapezio non è possibile calcolarla in quanto in numero di iterazioni per il calcolo del valore del π è fisso e quindi cambiare questo valore comporterebbe la perdita della correttezza dell'algoritmo. 
+
+### Strong scaling metodo Monte Carlo
+
+La strong scaling per il metodo Monte Carlo è stata testata compiendo 1E7 di iterazione in modo tale da confrontare sia il tempo di esecuzione che il valore del π. 
+
+![image](https://github.com/antoniopizza/pi_mpi/blob/master/img/strong_MonteCarlo.png)
+
+Verranno di seguito riportati anche i vari valori del π rispetto al numero di processori utilizzati con 1E7 iterazioni. 
+
+### Weak scaling metodo Monte Carlo
+
+La weak scaling per il metodo Monte Carlo è stata testata compiendo 2000 e 3000 iterazioni per un numero di processori uguale a 2 ed adeguando in modo proporzionale il numero di iterazioni all'aumentare del numero di processori. 
+
+![image](https://github.com/antoniopizza/pi_mpi/blob/master/img/weak_MonteCarlo.png)
+
 
