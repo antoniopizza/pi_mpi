@@ -139,10 +139,11 @@ I test sono stati effettuati sulle istanze m4.large (2core) di Amazon Web Servic
 Risorse utilizzate: 
 
  - 8 Istanze EC2 m4.large  **StarCluster-Ubuntu-12.04-x86_64-hvm**  -  _ami-52a0c53b_
- - 16 processori (2 core per Istanza).
+ - 16 processori (2 core per Istanza).  
+ 
 I tempi presenti nelle immagini dello strong e weak scaling sono riportati in millisecondi. 
 
-#
+
 
 ## Strong scaling metodo trapezio
 
