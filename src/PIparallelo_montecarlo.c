@@ -16,16 +16,16 @@ int main(int argc, char** argv)
         return 0;
     }
     
+    MPI_Status status;
+    MPI_Init (&argc, &argv);      /* starts MPI */
+    MPI_Comm_rank (MPI_COMM_WORLD, &rank);        /* get current process id */
+    MPI_Comm_size (MPI_COMM_WORLD, &np);        /* get number of processes */
+    
     if (np < 2) {
         printf("utilizzare un numero minimo di processori pari a 2\n");
         MPI_Finalize();
         return 0;
     }
-    
-    MPI_Status status;
-    MPI_Init (&argc, &argv);      /* starts MPI */
-    MPI_Comm_rank (MPI_COMM_WORLD, &rank);        /* get current process id */
-    MPI_Comm_size (MPI_COMM_WORLD, &np);        /* get number of processes */
     
     double tstart = MPI_Wtime();
     
