@@ -132,4 +132,4 @@ Ricevuti il numero iterazioni da compiere, ogni slave eseguirà le operazioni ne
 
 
 #### Confronto soluzioni
-Analizzando le soluzioni dei due algoritmi eseguiti con lo stesso input possiamo dedurre che il calcolo del π è più preciso se eseguito con il metodo del trapezio rispetto a quello eseguito con Monte Carlo. Questo succede perché col metodo Monte Carlo il numero totale di iterazioni verrà diviso tra i vari slave ed i valori casuali calcolati tramite un seme fisso, saranno dimezzati e uguali per ogni slave rendendo così la soluzione meno precisa rispetto al metodo del trapezio.
+Analizzando le soluzioni dei due algoritmi eseguiti con lo stesso input possiamo dedurre che il calcolo del π è più preciso se eseguito con il metodo del trapezio rispetto a quello eseguito con Monte Carlo. Questo succede perché col metodo Monte Carlo il numero totale di iterazioni viene diviso tra i dversi slave ed i valori casuali calcolati tramite un seme fisso, sono dimezzati e uguali per ogni slave rendendo così la soluzione meno precisa rispetto al metodo del trapezio.
