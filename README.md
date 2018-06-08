@@ -1,5 +1,6 @@
 # Compute in parallel an approximation of PI
-#### Programmazione Concorrente, Parallela e su Cloud##### Università degli Studi di Salerno - Anno Accademico 2016/2017
+#### Programmazione Concorrente, Parallela e su Cloud
+##### Università degli Studi di Salerno - Anno Accademico 2016/2017
 ##### Prof: Vittorio Scarano
 ##### Dott. Carmine Spagnuolo
 ##### Studente: Antonio Pizza 0522500574
@@ -16,7 +17,7 @@ Calcolare il valore approssimato del π sfruttando il calcolo parallelo, svilupp
  #
 
 ### Soluzione proposta
-Per entrambi gli algoritmi, lo scopo è quello di parallelizzare il processo di iterazioni di un ciclo, quindi è stato usato uno stesso approccio dove un nodo master si occupa dell'equa divisione delle porzioni da assegnare ad ogni nodo slave che provvederà ad effettuare determinati calcoli per arrivare all'approssimazione finale del valore del π.
+Per entrambi gli algoritmi, lo scopo è quello di parallelizzare il processo di iterazioni di un ciclo, quindi è stato usato uno stesso approccio dove un nodo master si occupa dell'equa divisione delle porzioni da assegnare ad ogni nodo slave che provvederanno ad effettuare determinati calcoli per arrivare all'approssimazione finale del valore del π.
 
 ### Regola del trapezio
 
