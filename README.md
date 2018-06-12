@@ -30,10 +30,10 @@ int np; //numero totale di processori
 ```
 
 ****Variabili per il range:****
-Per garantire la corretta esecuzione dell'algoritmo c'è bisogno di tener traccia del valore del numero dei cicli già effettuati in quanto questo valore viene utilizzato dagli slave per eseguire determinate operazioni.
+Per garantire la corretta esecuzione dell'algoritmo c'è bisogno di tener traccia del valore del numero dei cicli già effettuati in quanto questo valore viene utilizzato dagli slave per eseguire determinate operazioni. Utilizzo un array in modo tale da effettuare un send rispetto all'utilizzo di due variabili (inizo,fine) che mi obbligavano ad utilizzarne due.
 ```c
-int inizio = 0;
-int fine = 0;
+star_end[0] = 0;
+star_end[1] = 0;
 ```
 ****Calcolo del range:****
 In questa sezione il nodo master calcola i valori del range per ogni slave inerenti alle iterazioni da effettuare per poi essere inviati. Utilizziamo due send per inviare i dati:  
@@ -46,11 +46,11 @@ int lenght = N / (np-1);
 int mod = (int)N % (np-1);
 double result = 0.0, result_slave = 0.0, pi = 0.0;
 for (int i = 1; i < np; i++) {
-	MPI_Send(&inizio, 1, MPI_INT, i, 0, MPI_COMM_WORLD);
-	int res = (i <= mod)?lenght+1:lenght;
-	fine = inizio + res;
-	MPI_Send(&fine, 1, MPI_INT, i, 0, MPI_COMM_WORLD);
-	inizio = inizio + res;
+            int res = (i <= mod)?lenght+1:lenght;
+            star_end[1] = star_end[0] + res;
+            MPI_Send(p_array + 0, 2, MPI_INT, i, 0, MPI_COMM_WORLD);
+            star_end[0] = star_end[0] + res;
+        
 }
 ```
 
